@@ -1,22 +1,5 @@
 # Reconstructing Humans motion extracting data from HSMR
 
-<a href="https://isshikihugh.github.io/HSMR/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fisshikihugh.github.io%2FHSMR%2F&label=Project%20Page&up_message=Online&up_color=CAB7A5&down_message=Offline&down_color=%23FF3F4D&logo=googlechrome&logoColor=white"></a>
-<a href="https://arxiv.org/abs/2503.21751"><img src="https://img.shields.io/badge/arXiv-2503.21751-%23B31C1C?logo=arxiv&logoSize=auto"></a>
-<a href="https://www.cs.utexas.edu/~pavlakos/hsmr/resources/hsmr_suppmat.pdf"><img src="https://img.shields.io/badge/SupMat-PDF-%2347A141?logo=overleaf&logoColor=white"></a>
-<a href="https://colab.research.google.com/drive/1RDA9iKckCDKh_bbaKjO8bQ0-Lv5fw1CB?usp=sharing"><img src="https://img.shields.io/badge/Demo-Open%20In%20Colab-blue?logo=googlecolab"></a>
-<a href="https://huggingface.co/spaces/IsshikiHugh/HSMR"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Demo-Open%20In%20HF-blue"></a>
-<br>
-<a href="#"><img src="https://img.shields.io/badge/HSMR%20Demo-Released-green?logo=github"></a>
-<a href="#"><img src="https://img.shields.io/badge/HSMR%20Evaluation-Released-green?logo=github"></a>
-<a href="#"><img src="https://img.shields.io/badge/HSMR%20Training-Released-green?logo=github"></a>
-<a href="#"><img src="https://img.shields.io/badge/SKELify-TODO-red?logo=github"></a>
-
-<!-- ![](https://img.shields.io/github/stars/IsshikiHugh/HSMR) -->
-
-<!-- Teaser Parts -->
-
-![](https://isshikihugh.github.io/HSMR/assets/teaser_v2.png)
-
 > [**Original HSMR Repo - Reconstructing Humans with a Biomechanically Accurate Skeleton**](https://isshikihugh.github.io/HSMR/)
 > <br>
 > <br>
@@ -25,13 +8,15 @@
 
 ## 📢 News
 
-- [2025.04.04] HSMR has been accepted as Oral paper at CVPR 2025! 🎉
-- [2025.03.28] Release HSMR demo code, evaluation code and training code.
+- [2025.04.12] HSMR to mocap process has been released 2025! 🎉
 
 ## ⚒️ Setup
 
-1. [🌏 Environment Setup](./docs/SETUP.md#environment-setup)
-2. [📦 Data Preparation](./docs/SETUP.md#data-preparation)
+Copy the file.py inside the folder of your HSMR repo, and use it instead of the original one, then follow the guide below.
+It starts with extraction of meshes from the video in a very shor time.
+Then using 3DS Max with the script available in this repo you can convert the obj sequence in animation markers that can be used to guide any 3D character with any software.
+The process continue inside Motion Builder where the markers are used to drive an actor an then retarget to another character.
+Now the process can be automated, with just few step any video can be used to creata a tracking data that can be directly loaded to the actor created
 
 ## 🚀 Demo & Quick Start
 
@@ -39,51 +24,11 @@
 **[<img src="https://i.imgur.com/QCojoJk.png" width="30"> Google Colab demo](#) |
 [<img src="https://s2.loli.net/2024/09/15/aw3rElfQAsOkNCn.png" width="20"> HuggingFace demo](#)**
 -->
-
-```shell
-python exp/run_demo.py --help
-```
-
-Quick start with images:
-
-```shell
-# Folders wil be identified as image folders by default if `--input_type` is not specified.
-python exp/run_demo.py --input_path "data_inputs/demo/example_imgs"
-```
-
-Quick start with videos:
+go to the root foldr of your HSMR environment then copy run_obj_skin.py into exp subfolder then
 
 ```shell
 # Single file wil be identified as a video by default if `--input_type` is not specified.
-python exp/run_demo.py --input_path "data_inputs/demo/example_videos/gymnasts.mp4"
+python exp/run_demo_oby.py --input_path "data_inputs/demo/example_videos/gymnasts.mp4"
 ```
 
-> Tips: Rendering skeleton meshes is pretty slow. For videos, adding `--ignore_skel` or decrease `--max_instances` could boost the speed. Check `lib/kits/hsmr_demo.py:parse_args()` for more details.
 
-## 🧱 Reproducibility
-
-For reproducing the results in the paper, please refer to [`docs/EVAL.md`](./docs/EVAL.md) and [`docs/TRAIN.md`](./docs/TRAIN.md).
-
-<!-- We also provide the SKELify optimization pipeline, which optimizes SKEL parameters according to 2D keypoints detection. Please refer to [`docs/OPTIM.md`](./docs/OPTIM.md) for more details. -->
-
-## 🗓️ TODOs
-
-- [x] Release Colab demo.
-- [x] Release Huggingface demo.
-- [ ] Release SKELify pipeline.
-- [x] Release training code & data.
-
-## 📝 Citation
-
-```bibtex
-@inproceedings{xia2025hsmr,
-  title={Reconstructing Humans with a Biomechanically Accurate Skeleton},
-  author={Xia, Yan and Zhou, Xiaowei and Vouga, Etienne and Huang, Qixing and Pavlakos, Georgios},
-  booktitle={CVPR},
-  year={2025},
-}
-```
-
-## 📜 Acknowledgement
-
-Parts of the code are adapted from the following repos: [SKEL](https://github.com/MarilynKeller/SKEL), [4D-Humans/HMR2.0](https://github.com/shubham-goel/4D-Humans), [SMPLify-X](https://github.com/vchoutas/smplify-x), [SPIN](https://github.com/nkolot/SPIN), [ProHMR](https://github.com/nkolot/ProHMR), [ViTPose](https://github.com/ViTAE-Transformer/ViTPose), [Detectron2](https://github.com/facebookresearch/detectron2), and [GVHMR](https://github.com/zju3dv/GVHMR).
