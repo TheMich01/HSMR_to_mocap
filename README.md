@@ -31,4 +31,6 @@ go to the root foldr of your HSMR environment then copy run_obj_skin.py into exp
 python exp/run_demo_oby.py --input_path "data_inputs/demo/example_videos/gymnasts.mp4"
 ```
 
+Qui di seguito la videoguida completa
+[![Guarda il video](https://github.com/TheMich01/HSMR_to_mocap/blob/main/thumb/video01.png)](https://youtu.be/UTbyircAe5k?si=IgAqotZaaY3F6Ofr)
 
