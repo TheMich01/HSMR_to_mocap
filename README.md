@@ -1,6 +1,6 @@
 # Reconstructing Humans motion extracting data from HSMR
 
-> [**Original HSMR Repo - Reconstructing Humans with a Biomechanically Accurate Skeleton**](https://isshikihugh.github.io/HSMR/)
+> [**Original HSMR Repo - Reconstructing Humans with a Biomechanically Accurate Skeleton**](https://github.com/IsshikiHugh/HSMR)
 > <br>
 > <br>
 > *CVPR 2025 (Oral)*
@@ -12,7 +12,7 @@
 
 ## ⚒️ Setup
 
-Install [HSMR](https://isshikihugh.github.io/HSMR/) locally on your computer from the original repo, then copy the run_obj_skin.py file of this repo inside the exp folder of your HSMR local environment, and use it instead of the original one, then follow the guide below.
+Install [HSMR](https://github.com/IsshikiHugh/HSMR) locally on your computer from the original repo, then copy the run_obj_skin.py file of this repo inside the exp folder of your HSMR local environment, and use it instead of the original one, then follow the guide below.
 It starts with extraction of meshes from the video in a very shor time.
 Then using 3DS Max with the script available in this repo you can convert the obj sequence in animation markers that can be used to guide any 3D character with any software.
 The process continue inside Motion Builder where the markers are used to drive an actor an then retarget to another character.
