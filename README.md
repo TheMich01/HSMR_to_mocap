@@ -31,8 +31,9 @@ go to the root directory of your HSMR environment then copy run_obj_skin.py into
 # Single file wil be identified as a video by default if `--input_type` is not specified.
 python exp/run_demo_oby.py --input_path "data_inputs/demo/example_videos/gymnasts.mp4"
 ```
-On youtube you can watch the entire process:
+On youtube you can watch the entire process.
 
-Hor to run the code for processing a video:
+How to run the code for processing a video:
 [![Guarda il video](https://github.com/TheMich01/HSMR_to_mocap/blob/main/thumb/video01.png)](https://youtu.be/UTbyircAe5k?si=IgAqotZaaY3F6Ofr)
 
+[This is the link to the complete playlist:](https://youtube.com/playlist?list=PLOBhaaonduFZAYvwuWpZIwUPSLNO7aX_t)
