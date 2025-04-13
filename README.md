@@ -29,7 +29,7 @@ go to the root directory of your HSMR environment then copy run_obj_skin.py into
 
 ```shell
 # Single file wil be identified as a video by default if `--input_type` is not specified.
-python exp/run_demo_oby.py --input_path "data_inputs/demo/example_videos/gymnasts.mp4"
+python exp/run_demo_oby.py --input_path "your/video/path/video.mp4"
 ```
 On youtube you can watch the entire process.
 
